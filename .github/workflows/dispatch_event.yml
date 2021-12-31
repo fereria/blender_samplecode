@@ -1,17 +1,17 @@
 on:
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Create GitHub dispatch event
-      run: |
-        curl --request POST 'https://api.github.com/repos/fereria/reincarnation_tech/dispatches' \
-        --header 'Authorization: Bearer ${{secrets.MY_GITHUB_ACCESS_TOKEN}}' \
-        --header 'Content-Type: application/json' \
-        --data-raw '{
-          "event_type": "repository-a-updated"
-        }'
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Create GitHub dispatch event
+              run: |
+                  curl --request POST 'https://api.github.com/repos/fereria/reincarnation_tech/dispatches' \
+                  --header 'Authorization: Bearer ${{secrets.MY_GITHUB_ACCESS_TOKEN}}' \
+                  --header 'Content-Type: application/json' \
+                  --data-raw '{
+                    "event_type": "blender_sample_updated"
+                  }'
