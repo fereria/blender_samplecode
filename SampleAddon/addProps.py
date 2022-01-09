@@ -18,7 +18,7 @@ register関数に定義する。
 
 
 class SAMPLE_PT_PropGroup(bpy.types.PropertyGroup):
-    # PropetyGroupを追加
+    # PropertyGroupを追加
     my_int: bpy.props.IntProperty()
     my_float: bpy.props.FloatProperty()
     my_string: bpy.props.StringProperty()
